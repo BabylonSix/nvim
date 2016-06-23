@@ -15,6 +15,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1  " Set True Color
 "
 " INSTALLATION
 "   1. Reload .vimrc and :PlugInstall to install plugins
+"
+" PLUGINS
+"   1. http://vimawesome.com
 
 """""""""""""""""""
 " VIM-PLUG START
@@ -29,8 +32,12 @@ Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'kshenoy/vim-signature'
-Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
+Plug 'neomake/neomake'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 
 """""""""""""""""""
@@ -71,3 +78,9 @@ let g:rbpt_loadcmd_toggle = 0
 let mapleader = ',' " Remap Leader Key to ,
 
 
+"""""""""""""""""""
+" NerdTree
+"""""""""""""""""""
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+map <C-n> :NERDTreeToggle<CR> " ctrl+n toggles NerdTree
