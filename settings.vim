@@ -35,6 +35,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'wavded/vim-stylus'
 Plug 'neomake/neomake'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
