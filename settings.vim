@@ -59,10 +59,10 @@ Plug 'wavded/vim-stylus'               " Stylus Syntax
 call plug#end() " Add plugins to &runtimepath
 
 
-"""""""""""""""""""
-" Colors
+
 """""""""""""""""""
 " Color Scheme
+"""""""""""""""""""
 colorscheme gruvbox
 set background=dark    " Setting dark mode
 
@@ -74,14 +74,17 @@ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
+
+
+"""""""""""""""""""
 " Indent Guides
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
-
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-
+"""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_color_change_percent = 7
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 2
+set ts=2 sw=2 et " tab-space space-width
 
 
 
@@ -92,7 +95,7 @@ let mapleader = ',' " Remap Leader Key to ,
 let g:move_key_modifier = 'C'
 
 
-
+  
 """""""""""""""""""
 " NerdTree
 """""""""""""""""""
@@ -111,3 +114,14 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 
+
+"""""""""""""""""""
+" Tab-Space
+"""""""""""""""""""
+set visualbell " no noise
+"2 space ident
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set expandtab
