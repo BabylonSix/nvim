@@ -25,21 +25,29 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1  " Set True Color
 """""""""""""""""""
 call plug#begin('~/.vim/plugged') " Add your plugins after this line
 
-Plug 'mhinz/vim-startify'              " Welcome Screen
-Plug 'morhetz/gruvbox'                 " Our Color Theme
+
+" Functionality
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " file browser
-Plug 'easymotion/vim-easymotion'       " Move around screen faster (visually)
-Plug 'kshenoy/vim-signature'           " Toggle, display, and navigate marks
 Plug 'kien/ctrlp.vim'                  " Fuzzy file, buffer, mru, tag, etc finder
-Plug 'neomake/neomake'                 " We use it for linting
-Plug 'airblade/vim-gitgutter'          " Show Git changes in gutter
-Plug 'tpope/vim-fugitive'              " Git wrapper
-Plug 'nathanaelkane/vim-indent-guides' " Visually display indent levels
-Plug 'vim-airline/vim-airline'         " status/tabline (bottom)
+Plug 'easymotion/vim-easymotion'       " Move around screen faster (visually)
 Plug 'tpope/vim-surround'              " Quoting/parenthesizing
 Plug 'junegunn/vim-easy-align'         " Align text
 Plug 'matze/vim-move'                  " Move lines and selections up or down
 Plug 'terryma/vim-multiple-cursors'    " Sublime style multiple selections
+Plug 'kshenoy/vim-signature'           " Toggle, display, and navigate marks
+Plug 'tpope/vim-fugitive'              " Git wrapper
+Plug 'jiangmiao/auto-pairs'            " create pairs of [], (), {}, etc
+
+" Appearance
+Plug 'flazz/vim-colorschemes'          " Change Colorshemes
+Plug 'mhinz/vim-startify'              " Welcome Screen
+Plug 'morhetz/gruvbox'                 " Our Color Theme
+Plug 'nathanaelkane/vim-indent-guides' " Visually display indent levels
+Plug 'airblade/vim-gitgutter'          " Show Git changes in gutter
+Plug 'neomake/neomake'                 " We use it for linting
+Plug 'vim-airline/vim-airline'         " status/tabline (bottom)
+
+" Syntax
 Plug 'digitaltoad/vim-pug'             " Jade|Pug Syntax
 Plug 'wavded/vim-stylus'               " Stylus Syntax
 
