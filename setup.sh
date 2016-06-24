@@ -7,6 +7,8 @@ fi
 ln -sf ~/bin/nvim/settings.vim ~/.config/nvim/init.vim
 
 
+
+
 ###############
 # VUNDLE SETUP
 #

@@ -1,4 +1,5 @@
 filetype off                       " required
+
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1  " Set True Color
 
 
@@ -24,22 +25,24 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1  " Set True Color
 """""""""""""""""""
 call plug#begin('~/.vim/plugged') " Add your plugins after this line
 
-Plug 'morhetz/gruvbox'
-Plug 'easymotion/vim-easymotion'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'mhinz/vim-startify'
-Plug 'mhinz/vim-signify'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'kshenoy/vim-signature'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'kien/ctrlp.vim'
-Plug 'digitaltoad/vim-pug'
-Plug 'wavded/vim-stylus'
-Plug 'neomake/neomake'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'mhinz/vim-startify'              " Welcome Screen
+Plug 'morhetz/gruvbox'                 " Our Color Theme
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " file browser
+Plug 'easymotion/vim-easymotion'       " Move around screen faster (visually)
+Plug 'kshenoy/vim-signature'           " Toggle, display, and navigate marks
+Plug 'kien/ctrlp.vim'                  " Fuzzy file, buffer, mru, tag, etc finder
+Plug 'neomake/neomake'                 " We use it for linting
+Plug 'airblade/vim-gitgutter'          " Show Git changes in gutter
+Plug 'tpope/vim-fugitive'              " Git wrapper
+Plug 'nathanaelkane/vim-indent-guides' " Visually display indent levels
+Plug 'vim-airline/vim-airline'         " status/tabline (bottom)
+Plug 'tpope/vim-surround'              " Quoting/parenthesizing
+Plug 'junegunn/vim-easy-align'         " Align text
+Plug 'matze/vim-move'                  " Move lines and selections up or down
+Plug 'terryma/vim-multiple-cursors'    " Sublime style multiple selections
+Plug 'digitaltoad/vim-pug'             " Jade|Pug Syntax
+Plug 'wavded/vim-stylus'               " Stylus Syntax
+
 
 
 """""""""""""""""""
@@ -63,10 +66,10 @@ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
-" Indent GUides
+" Indent Guides
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
@@ -78,6 +81,8 @@ let g:rbpt_loadcmd_toggle = 0
 " Functionality
 """""""""""""""""""
 let mapleader = ',' " Remap Leader Key to ,
+let g:move_key_modifier = 'C'
+
 
 
 """""""""""""""""""
