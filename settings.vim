@@ -85,4 +85,16 @@ let mapleader = ',' " Remap Leader Key to ,
 """""""""""""""""""
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-map <C-n> :NERDTreeToggle<CR> " ctrl+n toggles NerdTree
+map <C-t> :NERDTreeToggle<CR> " ctrl+n toggles NerdTree
+
+
+"""""""""""""""""""
+" EasyAlign
+"""""""""""""""""""
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+
