@@ -52,11 +52,11 @@ Plug 'digitaltoad/vim-pug'             " Jade|Pug Syntax
 Plug 'wavded/vim-stylus'               " Stylus Syntax
 
 
-
 """""""""""""""""""
 " VIM-PLUG END
 """""""""""""""""""
 call plug#end() " Add plugins to &runtimepath
+
 
 
 
@@ -76,6 +76,7 @@ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 
 
+
 """""""""""""""""""
 " Indent Guides
 """""""""""""""""""
@@ -88,6 +89,7 @@ set ts=2 sw=2 et " tab-space space-width
 
 
 
+
 """""""""""""""""""
 " Functionality
 """""""""""""""""""
@@ -95,13 +97,16 @@ let mapleader = ',' " Remap Leader Key to ,
 let g:move_key_modifier = 'C'
 
 
-  
+
+
 """""""""""""""""""
 " NerdTree
 """""""""""""""""""
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 map <C-t> :NERDTreeToggle<CR> " ctrl+n toggles NerdTree
+
+
 
 
 """""""""""""""""""
@@ -115,6 +120,7 @@ nmap ga <Plug>(EasyAlign)
 
 
 
+
 """""""""""""""""""
 " Tab-Space
 """""""""""""""""""
@@ -125,3 +131,23 @@ set shiftwidth=2
 set softtabstop=2
 set smarttab
 set expandtab
+
+
+
+
+"""""""""""""""""""
+" Multiple Cursors
+"""""""""""""""""""
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+" Map start key separately from next key
+let g:multi_cursor_start_key='<F6>'
+
+let g:multi_cursor_start_key='<C-n>'
+let g:multi_cursor_start_word_key='g<C-n>'
